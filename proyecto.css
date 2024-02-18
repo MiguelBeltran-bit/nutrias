@@ -1,33 +1,71 @@
-/* Estilos CSS */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
+    color: #333;
 }
-header {
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header, nav, footer {
     background-color: #007bff;
     color: #fff;
-    padding: 20px;
-    text-align: center;
 }
+
 header h1 {
-    margin: 0;
-    font-size: 24px;
+    font-size: 36px;
 }
-nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
+
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
+
 nav a:hover {
-    background-color: #555;
+    background-color: #0056b3;
 }
+
 section {
-    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos específicos para la sección de Inicio */
+#home h2 {
+    font-size: 24px;
+}
+
+/* Estilos específicos para la sección de Contacto */
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para la lista de servicios */
+#services ul {
+    padding-left: 20px;
+}
+
+/* Media Query para hacer que la página sea responsive */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
 }
