@@ -24,12 +24,18 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = "block";
 }
 
-// JavaScript para mostrar la fecha y hora actual en el pie de página
-function updateDateTime() {
-    var now = new Date();
-    var datetimeElement = document.getElementById("datetime");
-    datetimeElement.textContent = "Fecha y hora actual: " + now.toLocaleString();
+// Función para mostrar la fecha y hora actual
+function displayDateTime() {
+    const dateTimeElement = document.getElementById("date-time");
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const formattedDateTime = now.toLocaleDateString('es-ES', options);
+    dateTimeElement.textContent = formattedDateTime;
 }
 
-// Actualiza la fecha y hora cada segundo
-setInterval(updateDateTime, 1000);
+// Actualizar la fecha y hora cada segundo
+setInterval(displayDateTime, 1000);
+
+// Mostrar la fecha y hora actual cuando la página se carga por primera vez
+displayDateTime();
+
