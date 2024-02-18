@@ -23,3 +23,13 @@ function showSection(sectionId) {
     // Muestra la sección especificada
     document.getElementById(sectionId).style.display = "block";
 }
+
+// JavaScript para mostrar la fecha y hora actual en el pie de página
+function updateDateTime() {
+    var now = new Date();
+    var datetimeElement = document.getElementById("datetime");
+    datetimeElement.textContent = "Fecha y hora actual: " + now.toLocaleString();
+}
+
+// Actualiza la fecha y hora cada segundo
+setInterval(updateDateTime, 1000);
